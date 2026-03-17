@@ -18,7 +18,7 @@ export default function ResultsSection({ hooks }: ResultsSectionProps) {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
         {hooks.map((hook, index) => (
-          <ResultCard key={index} hook={hook} index={index} />
+          <ResultCard key={`hook-${hook.slice(0, 20)}`} hook={hook} index={index} />
         ))}
       </div>
     </div>
