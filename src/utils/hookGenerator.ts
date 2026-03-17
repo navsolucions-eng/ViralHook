@@ -8,7 +8,7 @@ export async function generateHooks(description: string, platform: string): Prom
   const apiKey = import.meta.env.VITE_GROQ_API_KEY;
 
   if (!apiKey) {
-    throw new Error('');
+    throw new Error('VITE_GROQ_API_KEY no está configurada');
   }
 
   const platformName = platformNames[platform] || 'TikTok';
