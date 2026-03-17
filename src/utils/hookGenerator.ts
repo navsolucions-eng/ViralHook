@@ -5,10 +5,10 @@ const platformNames: { [key: string]: string } = {
 };
 
 export async function generateHooks(description: string, platform: string): Promise<string[]> {
-  const apiKey = import.meta..VITE_GROQ_API_KEY;
+  const apiKey = import.meta.env.VITE_GROQ_API_KEY;
 
   if (!apiKey) {
-    throw new Error('VITE_GROQ_API_KEY no está configurada');
+    throw new Error('');
   }
 
   const platformName = platformNames[platform] || 'TikTok';
