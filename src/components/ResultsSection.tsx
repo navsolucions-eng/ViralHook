@@ -2,7 +2,7 @@ import { TrendingUp } from 'lucide-react';
 import ResultCard from './ResultCard';
 
 interface ResultsSectionProps {
-  hooks: string[];
+  readonly hooks: string[];
 }
 
 export default function ResultsSection({ hooks }: ResultsSectionProps) {
