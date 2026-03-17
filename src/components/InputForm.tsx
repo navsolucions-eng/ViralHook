@@ -1,12 +1,12 @@
 import { Sparkles, Loader } from 'lucide-react';
 
 interface InputFormProps {
-  description: string;
-  platform: string;
-  onDescriptionChange: (value: string) => void;
-  onPlatformChange: (value: string) => void;
-  onGenerate: () => void;
-  isGenerating: boolean;
+  readonly description: string;
+  readonly platform: string;
+  readonly onDescriptionChange: (value: string) => void;
+  readonly onPlatformChange: (value: string) => void;
+  readonly onGenerate: () => void;
+  readonly isGenerating: boolean;
 }
 
 export default function InputForm({
