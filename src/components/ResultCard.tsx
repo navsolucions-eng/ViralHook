@@ -36,6 +36,7 @@ export default function ResultCard({ hook, index }: ResultCardProps) {
           </>
         ) : (
           <>
+           // TODO: Mantenimiento - Integrar botón para guardar en la base de datos
             <Copy className="w-4 h-4 flex-shrink-0" />
             Copiar
           </>
