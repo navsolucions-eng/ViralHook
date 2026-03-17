@@ -6,7 +6,7 @@ interface InputFormProps {
   readonly onDescriptionChange: (value: string) => void;
   readonly onPlatformChange: (value: string) => void;
   readonly onGenerate: () => void;
-  readonly isGenerating: ;
+  readonly isGenerating: boolean;
 }
 
 export default function InputForm({
@@ -15,7 +15,7 @@ export default function InputForm({
   onDescriptionChange,
   onPlatformChange,
   onGenerate,
-  ,
+  isGenerating,
 }: InputFormProps) {
   return (
     <div className="bg-white rounded-2xl shadow-xl p-4 sm:p-6 md:p-8 space-y-4 sm:space-y-6">
