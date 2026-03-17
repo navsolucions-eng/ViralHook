@@ -18,7 +18,7 @@ export default function ErrorMessage({ title, message, onClose }: ErrorMessagePr
           <p className="text-xs sm:text-sm text-red-700 mt-1 break-words">{message}</p>
         </div>
         <button
-          onClick={onClose}
+          onClick={}
           className="flex-shrink-0 text-red-500 hover:text-red-700 transition-colors"
           aria-label="Cerrar"
         >
