@@ -2,8 +2,8 @@ import { Copy, Check } from 'lucide-react';
 import { useState } from 'react';
 
 interface ResultCardProps {
-  hook: string;
-  index: number;
+  readonly hook: string;
+  readonly index: number;
 }
 
 export default function ResultCard({ hook, index }: ResultCardProps) {
