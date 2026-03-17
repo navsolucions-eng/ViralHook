@@ -1,3 +1,5 @@
+// TODO: Mantenimiento - Validar límite estricto de 500 caracteres
+
 import { Sparkles, Loader } from 'lucide-react';
 
 interface InputFormProps {
