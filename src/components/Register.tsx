@@ -7,6 +7,7 @@ export default function Register() {
   // Estados locales para input de email y contraseña
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [accepted, setAccepted] = useState(false);
 
   // Función que maneja el registro con Supabase
   const handleRegister = async () => {
@@ -64,15 +65,12 @@ export default function Register() {
 
           {/* Checkbox de términos */}
           <div className="flex items-center gap-2 mb-8 text-sm">
-            <input type="checkbox" />
+            <input type="checkbox" checked={accepted} onChange={(e) => setAccepted(e.target.checked)} />
             <span>Acepto Términos y Condiciones</span>
           </div>
 
           {/* Botón de registro */}
-          <button
-            onClick={handleRegister}
-            className="w-full bg-blue-600 text-white py-3 font-semibold"
-          >
+          <button onClick={handleRegister} disabled={!accepted} className="w-full bg-blue-600 text-white py-2 rounded disabled:opacity-50">
             Registrarse
           </button>
 
