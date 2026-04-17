@@ -63,6 +63,7 @@ export async function generateHooks(description: string, platform: string): Prom
     return hooks;
   } catch (error) {
     console.error('Error al generar ganchos:', error);
-    throw error;
+    if (error instanceof Error) throw error;)
+    throw new Error('Error desconocido en Hook Generator');
   }
 }
