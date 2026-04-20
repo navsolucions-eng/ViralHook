@@ -6,7 +6,7 @@ import ErrorMessage from '../components/ErrorMessage';
 import { generateHooks } from '../utils/hookGenerator';
 
 // Interfaz para el estado de error mostrado en la UI
-interface Error {
+interface AppError {
   title: string;
   message: string;
 }
@@ -22,7 +22,7 @@ export default function GeneratorPage() {
   // Estado de carga para mostrar spinner o deshabilitar botones
   const [isGenerating, setIsGenerating] = useState(false);
   // Estado de errores para mostrar mensajes al usuario
-  const [error, setError] = useState<Error | null>(null);
+  const [error, setError] = useState<AppError | null>(null);
 
   // Función que se invoca al presionar el botón de generar
   const handleGenerate = async () => {
@@ -34,6 +34,7 @@ export default function GeneratorPage() {
       setHooks(generatedHooks);
     } catch (err) {
       const errorMessage = err instanceof Error ? err.message : 'Algo salió mal';
+      // Actualiza el estado de error para mostrar el mensaje en la UI
 
       setError({
         title: "Error",
